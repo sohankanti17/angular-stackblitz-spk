@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggler mr-2" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="main-navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span class="d-md-none">BB</span>
+        <span class="d-none d-md-inline">BroomBroom</span>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse mr-auto order-3 order-md-2" id="main-navigation" [collapse]="!isCollapsed" [isAnimated]="true">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="#">Our fleet</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Partner with us</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-nav ml-auto flex-row order-2 order-md-3">
+      <button type="button" class="btn border border-danger mr-2">
+        <span class="fa fa-map-marker mr-2"></span>Select City
+      </button>
+      <button type="button" class="btn border border-warning d-none">
+        <span class="fa fa-user mr-1"></span>Login/Signup
+      </button>
+
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn border border-success dropdown-toggle" aria-controls="user-menu">
+          <span class="fa fa-user-secret mr-1"></span>
+          Username <span class="caret"></span>
+        </button>
+
+        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right shadow" role="menu" id="user-menu">
+          <li role="menuitem"><a class="dropdown-item" href="#">
+            <span class="fa fa-home mr-2"></span>My profile
+          </a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">
+            <span class="fa fa-motorcycle mr-1"></span>Bookings history
+            </a></li>
+          <li class="dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">
+            <span class="fa fa-sign-out mr-1"></span>Logout
+            </a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>
